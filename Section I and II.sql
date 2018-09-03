@@ -31,20 +31,34 @@ Insert two users:
     User 1:
         Username: tapeface
         Password: tapeface. Make sure to encrypt the content using PASSWORD native function.
+
+INSERT INTO Users (User_Id, Username, Password) VALUES (1, "tapeface", PASSWORD("tapeface"));
+
     User 2:
         Username: butterface
         Password: butterface. Make sure to encrypt the content using PASSWORD native function.
+
+INSERT INTO Users (Username, Password) VALUES ("butterface", PASSWORD("butterface"));
+
 
 Save the next three messages:
     Message 1
         Username: typeface
         Content: How is it going my friend!?
         Date: 2017-09-10 23:45:12
+
+INSERT INTO Messages (Message_Id, User_Id, Content) VALUES (1, 1, "How is it going my friend!?");
+
     Message 2
         Username: typeface
         Content: Are u there?
         Date: 2017-09-10 23:55:25
+
+INSERT INTO Messages (User_Id, Content) VALUES (1, "Are u there");
+
     Message 3
         Username: butterface
         Content: I’m here! Really cool. How about you man? Tell me something.
         Date: 2017-09-11 00:20:33
+
+INSERT INTO Messages (User_Id, Content) VALUES (2, "I'm here! Really cool. How about you man? Tell me something");
